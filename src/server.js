@@ -22,7 +22,7 @@ class Server {
     middleware() {
         this.app.use(morgan('dev'));
         const corsOptions = {
-            origin: 'http://localhost:4200', // Permite solo este origen
+            origin: '*', 
             methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
             allowedHeaders: ['Content-Type'], // Cabeceras permitidas
         };
